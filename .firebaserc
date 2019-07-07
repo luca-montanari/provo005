@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "provo001-470d9": {
+      "hosting": {
+        "provo005": [
+          "provo001-470d9"
+        ]
+      }
+    }
+  }
+}

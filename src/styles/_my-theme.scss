@@ -1,0 +1,66 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+
+@include angular-material-theme($theme);
+
+// mat-tooltip
+@mixin my-mat-tooltip-theme($theme) {
+    font-size: 0.7rem;
+}
+
+// mat-table
+@mixin my-mat-table-theme($theme) {    
+    $my-row-selected: map-get($mat-gray, 100);    
+    $my-row-hover: map-get($mat-gray, 200);
+  
+    [mat-table] {
+        [mat-row] {
+            &.is-selected {
+                background-color: $my-row-selected;
+            }            
+            &:hover {
+                background-color: $my-row-hover;
+            }            
+        }
+        [mat-header-cell] {
+            &.mat-column-action-select {
+                width: 80px;
+            }
+            &.mat-column-action-buttons {
+                width: 80px;
+            }
+        }
+        [mat-cell] {
+            &.mat-column-action-select {
+                text-align: center;
+                width: 80px;
+            }
+            &.mat-column-action-buttons {
+                text-align: center;
+                width: 80px;
+            }
+        }
+    }
+}
+@mixin my-mat-table-tooltip-theme($theme) {
+    @include my-mat-tooltip-theme($theme);
+}
+
+// mat-dialog-title
+@mixin my-mat-dialog-theme($theme) {
+    mat-dialog-container {
+        [mat-dialog-title] {
+            text-align: center;
+        }       
+    }
+}

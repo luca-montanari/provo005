@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Confermi?</h1>
+<div mat-dialog-content>
+    <p>Il negozio è stato modificato.</p>
+    <p>Chiudendo le modifiche andranno perse.</p>    
+</div>
+<div mat-dialog-actions align="center">
+    <button mat-icon-button color="primary" [mat-dialog-close]="false" matTooltip="Annula la chiusura" matTooltipClass="mat-tooltip">
+        <mat-icon>cancel</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" [mat-dialog-close]="true" matTooltip="Conferma la chiusura" matTooltipClass="mat-tooltip">
+        <mat-icon>arrow_drop_down_circle</mat-icon>
+    </button>
+</div>

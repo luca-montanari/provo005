@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Aggiorna</h1>
+<div mat-dialog-content [formGroup]="formGroup">
+    <mat-form-field>
+        <input matInput
+               placeholder="Nome"
+               formControlName="name"
+               required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput
+               placeholder="Descrizione"
+               formControlName="description"
+               required>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button (click)="cancel()">Annulla</button>
+  <button mat-button [mat-dialog-close]="formGroup.value" [disabled]="!canUpdate()">Aggiorna</button>
+</div>

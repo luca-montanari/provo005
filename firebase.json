@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "provo005",
+      "public": "dist/provo005",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
